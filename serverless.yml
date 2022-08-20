@@ -1,0 +1,13 @@
+# serverless.yml
+
+myNextApplication:
+  component: "@sls-next/serverless-component@3.7.0"
+  inputs:
+    domain: ["www", "tomfrantz.dev"]
+    certificateArn: "arn:aws:acm:us-east-1:880397919816:certificate/82e52ee0-890a-40d6-9cc7-12bbdb497723"
+    cloudfront:
+      distributionId: E1RXJOSP53VSBL
+      comment: "Static and Lambda@Edge handlers for API"
+      aliases: [ "www.tomfrantz.dev" ]
+      certificate:
+        acmCertificateArn: "arn:aws:acm:us-east-1:880397919816:certificate/82e52ee0-890a-40d6-9cc7-12bbdb497723"
