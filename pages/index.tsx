@@ -3,6 +3,7 @@ import type { NextPage } from "next";
 
 import { InnerSegment, Segment } from "../components/svg_dividers/lib/segment";
 import WigglyLineDivider from "../components/WigglyLineDivider";
+import BorderContainer from "../components/BorderContainer";
 
 // import styles from '../styles/Home.module.css'
 
@@ -41,21 +42,14 @@ const Home: NextPage = () => {
             <Head>
                 <title>tomfrantz.dev</title>
             </Head>
-            <div
-                style={{
-                    color: "white",
-                    background: "black",
-                    width: "100vw",
-                    padding: 24,
-                }}
-            >
-                <h1>Tom Frantz</h1>
-                <p>This is pretty damn radical</p>
-            </div>
-            <WigglyLineDivider lines={LINES} />
-            <div>
+
+            <BorderContainer>
+                <h1 style={{ marginTop: 0 }}>Tom Frantz</h1>
+
+                <p>H.Y.M.C?</p>
                 <p>This site is super under construction</p>
-            </div>
+            </BorderContainer>
+            {/*<WigglyLineDivider lines={LINES} />*/}
         </>
     );
 };
