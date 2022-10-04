@@ -5,7 +5,7 @@ export interface BorderContainerProps {
     children: ReactNode;
 }
 
-const CANVAS_SIZE = 92;
+const CANVAS_SIZE = 80;
 const SCALE = 1.5;
 
 enum BorderType {
