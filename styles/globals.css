@@ -1,11 +1,27 @@
 html,
 body {
+  overflow-x: hidden;
   font-size: 20px;
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  scrollbar-gutter: stable;
+  width: 100vw;
+  height: 100vh;
+  /*background-color: rgb(219, 193, 166, 1);*/
+  /*z-index: -1000000;*/
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: rgb(219, 193, 166, 1);
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgba(193, 150, 134, 1);
+  border-radius: 20px;
+  border: transparent;
 }
 
 a {
@@ -20,25 +36,47 @@ a {
   color: #483d3c;
 }
 
-@media (min-width: 1200px) {
-  h1 {
-    font-size: 4em;
-  }
+/*@media (min-width: 1200px) {*/
+/*  h1 {*/
+/*    font-size: 4em;*/
+/*  }*/
 
-  h2 {
-    font-size: 2em;
-  }
+/*  h2 {*/
+/*    font-size: 2em;*/
+/*  }*/
 
-  h3 {
-    font-size: 1.5em;
-  }
-}
+/*  h3 {*/
+/*    font-size: 1.5em;*/
+/*  }*/
+/*}*/
+/*h1, h2, h3, h4, h5, h6 {*/
+/*  color: #8c435a;*/
+/*}*/
+
+/*@media (max-width: 760px) {*/
+/*  h1 {*/
+/*    font-size: 2em;*/
+/*  }*/
+
+/*  h2 {*/
+/*    font-size: 1em;*/
+/*  }*/
+
+/*  h3 {*/
+/*    font-size: 0.75em;*/
+/*  }*/
+
+/*  p {*/
+/*    font-size: 0.5em;*/
+/*  }*/
+/*}*/
 h1, h2, h3, h4, h5, h6 {
   color: #8c435a;
 }
 
 p {
   font-family: Courier Prime;
+  font-size: .8rem;
 }
 
 @font-face {
