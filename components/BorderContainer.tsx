@@ -1,11 +1,12 @@
 import { ReactNode } from "react";
 import styled, { css } from "styled-components";
+import MainContent from "./MainContent";
 
 export interface BorderContainerProps {
     children: ReactNode;
 }
 
-const CANVAS_SIZE = 84;
+export const CANVAS_SIZE = 84;
 
 enum BorderType {
     TopLeft,
@@ -36,11 +37,11 @@ const BackgroundDiv = styled.div<InternalStyleProps>`
 
     background-image: ${({ type }) => {
         if (type === BorderType.Left || type === BorderType.Right) {
-            return 'url("border_segment_side_high.png")';
+            return 'url("/border_segment_side_high.png")';
         } else if (type === BorderType.Top || type === BorderType.Bottom) {
-            return 'url("border_segment_high.png")';
+            return 'url("/border_segment_high.png")';
         } else {
-            return 'url("border_corner_high.png")';
+            return 'url("/border_corner_high.png")';
         }
     }};
 
@@ -80,10 +81,6 @@ const BackgroundDiv = styled.div<InternalStyleProps>`
     }};
 `;
 
-const H4NoMargin = styled.h4`
-    margin: 0;
-`;
-
 export const BorderContainer = (props: BorderContainerProps) => {
     return (
         <div
@@ -98,53 +95,7 @@ export const BorderContainer = (props: BorderContainerProps) => {
             <BackgroundDiv type={BorderType.TopRight} />
 
             <BackgroundDiv type={BorderType.Left} />
-            <div
-                style={{
-                    backgroundColor: "#f4e8d2",
-
-                    width: `calc(100vw - ${CANVAS_SIZE * 2}px)`,
-                    minHeight: `calc(100vh - ${CANVAS_SIZE * 2}px)`,
-                    zIndex: 100,
-                    // margin: "-28px -28px",
-                }}
-            >
-                <div
-                    style={{
-                        height: "36px",
-                        marginTop: "-36px",
-                        display: "flex",
-                        flexDirection: "row",
-                        gap: "12px",
-                        marginLeft: "12px",
-                        justifyContent: "space-between",
-                    }}
-                >
-                    <div
-                        style={{
-                            display: "flex",
-                            flexDirection: "row",
-                            gap: "12px",
-                            marginLeft: "12px",
-                        }}
-                    >
-                        <H4NoMargin>Home</H4NoMargin>
-                        <H4NoMargin>Blog</H4NoMargin>
-                    </div>
-
-                    <div
-                        style={{
-                            display: "flex",
-                            flexDirection: "row",
-                            gap: "12px",
-                            marginRight: "12px",
-                        }}
-                    >
-                        <H4NoMargin>Github</H4NoMargin>
-                        <H4NoMargin>LinkedIn</H4NoMargin>
-                    </div>
-                </div>
-                <div>{props.children}</div>
-            </div>
+            <MainContent>{props.children}</MainContent>
             <BackgroundDiv type={BorderType.Right} />
 
             <BackgroundDiv type={BorderType.BottomLeft} />

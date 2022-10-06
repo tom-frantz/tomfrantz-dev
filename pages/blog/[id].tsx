@@ -63,7 +63,7 @@ export async function getStaticProps({
     const fileContents = fs.readFileSync(fullPath, "utf8");
 
     // Use gray-matter to parse the post metadata section
-    const matterResult = matter(fileContents);
+    const matterResult = matter(fileContents, { excerpt: true });
 
     // Use remark to convert markdown into HTML string
     const processedContent = await remark()
@@ -77,6 +77,7 @@ export async function getStaticProps({
             postData: {
                 id,
                 contentHtml,
+                excerpt: matterResult.excerpt,
                 ...matterResult.data,
             },
         },

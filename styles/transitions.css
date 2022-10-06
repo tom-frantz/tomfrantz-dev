@@ -1,0 +1,75 @@
+blockquote {
+    background: #dbc1a6;
+    border-left: 10px solid #8c435a;
+    color: #8c435a;
+    margin: 0 16px;
+    padding: 0.5em 10px;
+    quotes: "\201C""\201D""\2018""\2019";
+}
+blockquote:before {
+    color: #8c435a;
+    content: open-quote;
+    font-size: 4em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
+}
+blockquote p {
+    display: inline-block;
+    color: #8c435a;
+    margin: 0;
+}
+
+.slide-in {
+    animation: slide-in 0.5s forwards;
+    -webkit-animation: slide-in 0.5s forwards;
+}
+
+.slide-out {
+    animation: slide-out 0.5s forwards;
+    -webkit-animation: slide-out 0.5s forwards;
+}
+
+@keyframes slide-in {
+    0% {
+        transform: translateX(-10%);
+        opacity: 0%;
+    }
+    100% {
+        transform: translateX(0%);
+        opacity: 100%;
+    }
+}
+
+@-webkit-keyframes slide-in {
+    0% {
+        transform: translateX(-10%);
+        opacity: 0%;
+    }
+    100% {
+        -webkit-transform: translateX(0%);
+        opacity: 100%;
+    }
+}
+
+@keyframes slide-out {
+    0% {
+        transform: translateX(0%);
+        opacity: 100%;
+    }
+    100% {
+        transform: translateX(10%);
+        opacity: 0%;
+    }
+}
+
+@-webkit-keyframes slide-out {
+    0% {
+        -webkit-transform: translateX(0%);
+        opacity: 100%;
+    }
+    100% {
+        -webkit-transform: translateX(10%);
+        opacity: 0%;
+    }
+}
