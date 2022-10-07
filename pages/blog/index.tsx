@@ -81,6 +81,7 @@ const index: React.FC<indexProps> = ({ posts }: indexProps) => {
                             <Link href={`blog/${path}`}>
                                 <h3
                                     style={{
+                                        cursor: "pointer",
                                         marginBottom: 0,
                                         marginTop: 0,
                                         textDecoration: "underline",

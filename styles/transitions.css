@@ -3,7 +3,7 @@ blockquote {
     border-left: 10px solid #8c435a;
     color: #8c435a;
     margin: 0 16px;
-    padding: 0.5em 10px;
+    padding: 16px 16px;
     quotes: "\201C""\201D""\2018""\2019";
 }
 blockquote:before {
@@ -11,7 +11,7 @@ blockquote:before {
     content: open-quote;
     font-size: 4em;
     line-height: 0.1em;
-    margin-right: 0.25em;
+    margin-right: 8px;
     vertical-align: -0.4em;
 }
 blockquote p {

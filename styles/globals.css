@@ -11,7 +11,7 @@ body {
 }
 
 ::-webkit-scrollbar {
-    width: 4px;
+    width: 8px;
 }
 ::-webkit-scrollbar-track {
     background: rgb(219, 193, 166, 1);
@@ -43,7 +43,7 @@ h3,
 h4,
 h5 {
     color: #8c435a;
-    margin: 3rem 0 1.38rem;
+    margin: 2rem 0 1.38rem;
 }
 
 h1 {

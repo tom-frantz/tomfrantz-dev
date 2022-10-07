@@ -11,13 +11,32 @@ const SlidingQuotes: React.FC<SlidingQuotesProps> = (
     props: SlidingQuotesProps
 ) => {
     const quotes: Quote[] = [
-        { quote: "This is a radical site!", attribution: "Myself" },
-        { quote: "Wow, so amazing", attribution: "Myself" },
-        { quote: "I can't believe my eyes", attribution: "Myself" },
+        { quote: "Tom is rad!", attribution: "Honman, my Co-Overworker" },
+        {
+            quote: "H.Y.M.C!",
+            attribution: "Milindi Kodikara, my darling GF",
+        },
+        {
+            quote: "Wow, I ended up here? Couldn’t I have ended up on Google where I could at least yeet something?",
+            attribution: "Ally, my Coworker",
+        },
+        {
+            quote: "This is easily the best site I've ever witnessed!",
+            attribution: "Myself",
+        },
+        {
+            quote: "wouldn't trust him with my houseplants but he can make a mean cake",
+            attribution: "Michaela, my sister",
+        },
+
+        {
+            quote: "Honestly, a masterpiece of a human!",
+            attribution: "Milindi Kodikara, my darling GF",
+        },
     ];
 
     const [visible, setVisible] = useState(true);
-    const [quote, setQuote] = useState(0);
+    const [quote, setQuote] = useState(2);
 
     useEffect(() => {
         let ms = 5000;
@@ -34,17 +53,11 @@ const SlidingQuotes: React.FC<SlidingQuotesProps> = (
             console.log("HIDE");
         };
 
-        let timeoutFadeIn: any;
-        setTimeout(() => {
-            timeoutFadeIn = setInterval(fadeIn, ms);
-        }, delay);
-
+        let timeoutFadeIn = setInterval(() => setTimeout(fadeIn, delay), ms);
         let timeoutFadeOut = setInterval(fadeOut, ms);
 
         return () => {
-            if (timeoutFadeIn) {
-                clearInterval(timeoutFadeIn);
-            }
+            clearInterval(timeoutFadeIn);
             clearInterval(timeoutFadeOut);
         };
     }, []);
@@ -55,7 +68,8 @@ const SlidingQuotes: React.FC<SlidingQuotesProps> = (
                 style={{
                     display: "inline-flex",
                     flexDirection: "column",
-                    width: "",
+                    width: "calc(100% - 48px)",
+                    // paddingRight: "8px",
                 }}
             >
                 <p>{quotes[quote].quote}</p>

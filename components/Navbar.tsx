@@ -12,12 +12,13 @@ const Navbar: React.FC<NavbarProps> = (props: NavbarProps) => {
     return (
         <div
             style={{
-                height: "36px",
-                marginTop: "-36px",
+                minHeight: "36px",
+                flexWrap: "wrap",
+                margin: "-36px 8px 8px 8px",
                 display: "flex",
                 flexDirection: "row",
                 gap: "12px",
-                marginLeft: "12px",
+                // marginLeft: "12px",
                 justifyContent: "space-between",
             }}
         >
@@ -26,7 +27,7 @@ const Navbar: React.FC<NavbarProps> = (props: NavbarProps) => {
                     display: "flex",
                     flexDirection: "row",
                     gap: "12px",
-                    marginLeft: "12px",
+                    // marginLeft: "12px",
                 }}
             >
                 <a href={"/"}>
@@ -42,7 +43,7 @@ const Navbar: React.FC<NavbarProps> = (props: NavbarProps) => {
                     display: "flex",
                     flexDirection: "row",
                     gap: "12px",
-                    marginRight: "12px",
+                    // marginRight: "12px",
                 }}
             >
                 <a href={"https://github.com/tom-frantz"}>
