@@ -47,7 +47,7 @@ const SlidingQuotes: React.FC<SlidingQuotesProps> = (
             }
             clearInterval(timeoutFadeOut);
         };
-    }, []);
+    }, [quotes.length]);
 
     return (
         <blockquote className={visible ? "slide-in" : "slide-out"}>
