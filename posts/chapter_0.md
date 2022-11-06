@@ -13,7 +13,7 @@ I'm sure this isn't the last I'm going to see of you, or if it is, I hope you li
 
 ## What is this? Where am I?
 
-Welcome, this is my personal website. As of today (11th of November 2022) I have got an assortment of things that vaguely interest me or I think are relevant to me. Hopefully you'll find my [GitHub](), [LinkedIn](), and [my personal website](https://www.tomfrantz.dev/?recursive)
+Welcome, this is my personal website. As of today (11th of November 2022) I have got an assortment of things that vaguely interest me or I think are relevant to me. Hopefully you'll find my [GitHub](https://github.com/tom-frantz), [LinkedIn](https://www.linkedin.com/in/thomas-albert-frantz/), and [my personal website](https://www.tomfrantz.dev/?recursive)
 
 Feel free to shoot me an email at [thomas.albert.frantz@gmail.com](mailto:thomas.albert.frantz@gmail.com) if you ever feel like you want to chat!
 
