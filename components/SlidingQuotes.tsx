@@ -17,7 +17,7 @@ const SlidingQuotes: React.FC<SlidingQuotesProps> = (
             attribution: "Milindi Kodikara, my darling GF",
         },
         {
-            quote: "Wow, I ended up here? Couldn’t I have ended up on Google where I could at least yeet something?",
+            quote: "Wow, I ended up here? Couldn’t I have ended up on Google or something?",
             attribution: "Ally, my Coworker",
         },
         {
@@ -45,12 +45,10 @@ const SlidingQuotes: React.FC<SlidingQuotesProps> = (
         const fadeIn = () => {
             setQuote((q) => (q + 1) % quotes.length);
             setVisible(true);
-            console.log("SHOW");
         };
 
         let fadeOut = () => {
             setVisible(false);
-            console.log("HIDE");
         };
 
         let timeoutFadeIn = setInterval(() => setTimeout(fadeIn, delay), ms);
