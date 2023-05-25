@@ -11,14 +11,10 @@ const SlidingQuotes: React.FC<SlidingQuotesProps> = (
     props: SlidingQuotesProps
 ) => {
     const quotes: Quote[] = [
-        { quote: "Tom is rad!", attribution: "Honman, my Co-Overworker" },
+        { quote: "That's crazy dude", attribution: "Alec, my Co-worker" },
         {
             quote: "H.Y.M.C!",
             attribution: "Milindi Kodikara, my darling GF",
-        },
-        {
-            quote: "Wow, I ended up here? Couldn’t I have ended up on Google or something?",
-            attribution: "Ally, my Coworker",
         },
         {
             quote: "This is easily the best site I've ever witnessed!",
