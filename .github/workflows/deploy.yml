@@ -24,6 +24,11 @@ jobs:
         run: npm ci
       - name: Build
         run: npm run build
+      - name: Archive production artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: output-dir
+          path: out
   deploy:
     needs: build
     runs-on: ubuntu-latest
@@ -35,10 +40,14 @@ jobs:
           role-to-assume: arn:aws:iam::880397919816:role/tomfrantz_dev_github_role_2
           role-session-name: tomfrantz_dev_github_actions
           aws-region: ap-southeast-2
+      - name: Download a single artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: output-dir
       - uses: hashicorp/setup-terraform@v2
         with:
           terraform_version: 1.1.7
       - run: terraform init
-        working-directory: ./terraform
+        working-directory: terraform
       - run: terraform apply -auto-approve
-        working-directory: ./terraform
+        working-directory: terraform
