@@ -31,7 +31,8 @@ jobs:
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v2
         with:
-          role-to-assume: arn:aws:iam::880397919816:role/tomfrantz-dev_Github_Action_Role
+          role-to-assume: arn:aws:iam::880397919816:role/tomfrantz_dev_github_role_2
+          role-session-name: tomfrantz_dev_github_actions
           aws-region: ap-southeast-2
       - uses: hashicorp/setup-terraform@v2
         with:
