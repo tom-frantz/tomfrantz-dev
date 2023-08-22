@@ -24,4 +24,15 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+  min-height: 100vh;
+}
+
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: "Kollektif", serif;
+  font-weight: 500;
+}
+
+body *,p {
+  font-family: "Montserrat", serif;
 }
