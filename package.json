@@ -4,13 +4,15 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "manifest": "ts-node --esm utils/blog_manifest.ts",
-    "build": "ts-node utils/blog_manifest.ts && next build",
+    "manifest": "node --loader ts-node/esm --experimental-loader=./utils/mdx_loader.js utils/blog_manifest.ts",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
     "@mdx-js/loader": "^2.3.0",
+    "@mdx-js/mdx": "^2.3.0",
+    "@mdx-js/node-loader": "^2.3.0",
     "@mdx-js/react": "^2.3.0",
     "@next/mdx": "^13.4.19",
     "autoprefixer": "10.4.15",
