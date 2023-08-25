@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import styles from "./blog.module.css";
+import Navbar from "@/app/navbar";
 
 export const metadata: Metadata = {
     title: "Create Next App",
@@ -12,14 +12,20 @@ export default function RootLayout({
     children: React.ReactNode;
 }) {
     return (
-        <html lang="en">
-            <body>
-                <article
-                    className={`mx-auto pv-4 prose dark:prose-invert lg:prose-xl`}
-                >
-                    {children}
-                </article>
-            </body>
-        </html>
+        <div
+            className={
+                "flex lg:flex-row items-center lg:items-start flex-col min-w-fit max-w-full justify-center"
+            }
+        >
+            <Navbar />
+            <article
+                className={`container lg:md xl:lg pv-4 prose prose-sm md:prose-base lg:prose-lg xl:prose-xl dark:prose-invert py-8 px-4 lg:px-0`}
+            >
+                {children}
+            </article>
+            <div
+                className={"w-[calc(100% - 15rem) max-w-[15rem] h-4 flex-grow"}
+            ></div>
+        </div>
     );
 }
