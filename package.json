@@ -7,6 +7,7 @@
     "manifest": "node --loader ts-node/esm --experimental-loader=./utils/mdx_loader.js utils/blog_manifest.ts",
     "build": "next build",
     "start": "next start",
+    "start_out": "npx serve@latest out",
     "lint": "next lint"
   },
   "dependencies": {
@@ -18,7 +19,7 @@
     "autoprefixer": "10.4.15",
     "eslint": "8.47.0",
     "eslint-config-next": "13.4.19",
-    "next": "13.4.19",
+    "next": "13.4.18",
     "postcss": "8.4.28",
     "react": "18.2.0",
     "react-dom": "18.2.0",
