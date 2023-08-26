@@ -93,10 +93,6 @@ resource "aws_cloudfront_distribution" "frontend" {
     cached_methods   = ["GET", "HEAD"]
     target_origin_id = var.frontend_bucket_name
 
-    min_ttl = "0"
-    default_ttl = "300"
-    max_ttl = "3600"
-
     forwarded_values {
       query_string = false
 
@@ -109,6 +105,8 @@ resource "aws_cloudfront_distribution" "frontend" {
   }
 
   viewer_certificate {
+
+#    cloudfront_default_certificate = true
     acm_certificate_arn = var.certificate_arn
     ssl_support_method  = "sni-only"
 
@@ -138,8 +136,6 @@ resource "aws_cloudfront_distribution" "frontend" {
     response_code         = "200"
     response_page_path    = "/"
   }
-
-
 }
 
 resource "aws_route53_record" "frontend_record" {

@@ -7,6 +7,5 @@ resource "aws_s3_object" "nextjs_build" {
   source       = "${local.build_dir}/${each.key}"
   content_type = lookup(local.mime_types, regex("\\.[^.]+$", each.key), null)
 
-#  etag   = filemd5("${local.build_dir}/${each.value}")
-  etag = uuid()
+  etag   = filemd5("${local.build_dir}/${each.value}")
 }
