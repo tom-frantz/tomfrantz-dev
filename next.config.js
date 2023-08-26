@@ -1,4 +1,4 @@
-const isProd = process.env.NODE_ENV === "production";
+const isProd = process.env.NODE_ENV !== "production";
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -9,7 +9,6 @@ const nextConfig = {
     // For S3
     output: "export",
     trailingSlash: true,
-    assetPrefix: isProd ? "https://tomfrantz.dev" : undefined,
 };
 
 const withMDX = require("@next/mdx")();

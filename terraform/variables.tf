@@ -1,9 +1,5 @@
-variable "certificate_arn" {
-  description = "The ARN of the certificate to use for HTTPS"
-}
-
-variable "frontend_bucket_name" {
-  description = "The name of the S3 bucket to use for the frontend"
+variable "vercel_a_ip" {
+  description = "The IP that Vercel requested for your domains A record"
 }
 
 variable "hosted_zone_id" {
