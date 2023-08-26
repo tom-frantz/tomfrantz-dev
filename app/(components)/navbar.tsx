@@ -65,6 +65,7 @@ export default function Navbar(props: {}) {
             </a>
             <button
                 onClick={() => {
+                    console.log("clicked");
                     toggleDarkMode();
                     // setTheme(getMode());
                 }}
