@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { currentDarkMode, toggleDarkMode } from "@/app/(components)/dark_mode";
+import FlashyLink from "@/app/(components)/flashy_link";
 
 const SUN = (
     <svg
@@ -43,36 +44,28 @@ export default function Navbar(props: {}) {
     return (
         <div
             className={
-                "max-w-[65ch] w-full flex flex-row items-baseline pt-8 lg:w-60 lg:flex-col lg:space-x-0 lg:space-y-4  px-4 lg:py-8 lg:px-12"
+                "max-w-[65ch] w-full flex flex-row items-baseline pt-8 lg:w-60 lg:flex-col lg:space-x-0 lg:space-y-2  px-4 lg:py-8 lg:px-12"
             }
         >
-            <a
+            <FlashyLink
                 href="/"
-                className={
-                    "sm:text-lg md:text-2xl font-bold hover:text-amber-400"
-                }
+                className={"sm:text-lg md:text-2xl font-bold no-underline"}
             >
                 Tom Frantz
-            </a>
-            <a href="/blog" className={"underline hover:text-amber-400 ml-8"}>
+            </FlashyLink>
+            <FlashyLink href="/blog" className={"ml-8"}>
                 Blog
-            </a>
-            <a
-                href="/projects"
-                className={"underline hover:text-amber-400 ml-8"}
-            >
+            </FlashyLink>
+            <FlashyLink href="/projects" className={"ml-8"}>
                 Projects
-            </a>
+            </FlashyLink>
             <button
                 onClick={() => {
-                    console.log("clicked");
                     toggleDarkMode();
-                    // setTheme(getMode());
                 }}
                 className="dark:bg-stone-800 bg-stone-100 rounded-md p-2 space-x-0 ml-auto"
             >
                 {theme === "dark" ? SUN : MOON}
-                {/*{MOON}*/}
             </button>
         </div>
     );
