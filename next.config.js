@@ -4,7 +4,9 @@ const nextConfig = {
     experimental: {
         mdxRs: true,
     },
+    // For S3
     output: "export",
+    trailingSlash: true,
 };
 
 const withMDX = require("@next/mdx")();
