@@ -12,29 +12,29 @@ permissions:
   id-token: write
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 16.13.x
-          cache: npm
-      - name: Install
-        run: npm ci
-        env:
-          NODE_ENV: production
-      - name: Build
-        run: npm run build
-        env:
-          NODE_ENV: production
-      - name: Archive NextJS Production Build
-        uses: actions/upload-artifact@v3
-        with:
-          name: nextjs-export-output-dir
-          path: out
+#  build:
+#    runs-on: ubuntu-latest
+#    steps:
+#      - uses: actions/checkout@v2
+#      - uses: actions/setup-node@v3
+#        with:
+#          node-version: 16.13.x
+#          cache: npm
+#      - name: Install
+#        run: npm ci
+#        env:
+#          NODE_ENV: production
+#      - name: Build
+#        run: npm run build
+#        env:
+#          NODE_ENV: production
+#      - name: Archive NextJS Production Build
+#        uses: actions/upload-artifact@v3
+#        with:
+#          name: nextjs-export-output-dir
+#          path: out
   deploy:
-    needs: build
+#    needs: build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -44,11 +44,11 @@ jobs:
           role-to-assume: arn:aws:iam::880397919816:role/tomfrantz_dev_github_role_2
           role-session-name: tomfrantz_dev_github_actions
           aws-region: ap-southeast-2
-      - name: Download NextJS Production Build
-        uses: actions/download-artifact@v3
-        with:
-          name: nextjs-export-output-dir
-          path: out
+#      - name: Download NextJS Production Build
+#        uses: actions/download-artifact@v3
+#        with:
+#          name: nextjs-export-output-dir
+#          path: out
 
       - uses: hashicorp/setup-terraform@v2
         with:
@@ -58,7 +58,6 @@ jobs:
       - run: terraform apply -auto-approve -input=false
         working-directory: terraform
         env:
-          TF_VAR_certificate_arn: ${{ vars.TF_VAR_certificate_arn}}
-          TF_VAR_frontend_bucket_name: ${{ vars.TF_VAR_frontend_bucket_name}}
           TF_VAR_hosted_zone_id: ${{ vars.TF_VAR_hosted_zone_id}}
           TF_VAR_domain: ${{ vars.TF_VAR_domain}}
+          TF_VAR_vercel_a_ip: ${{ vars.TF_VAR_vercel_a_ip}}
