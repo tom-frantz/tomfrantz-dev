@@ -1,9 +1,18 @@
 import Image from "next/image";
+import FlashyLink from "@/app/(components)/flashy_link";
 
 export default function Home() {
     return (
-        <main>
-            <h1>Hello World</h1>
+        <main className="container mx-auto py-16 px-16">
+            <FlashyLink href={"/"} className={"no-underline"}>
+                <h1 className="text-4xl sm:text-6xl md:text-8xl font-bold ">
+                    Tom Frantz
+                </h1>
+            </FlashyLink>
+            <div className="flex flex-row font-bold space-x-4 py-4 underline">
+                <FlashyLink href={"/blog"}>Blog</FlashyLink>
+                <FlashyLink href={"/projects"}>Projects</FlashyLink>
+            </div>
         </main>
     );
 }
