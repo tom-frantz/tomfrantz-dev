@@ -19,7 +19,7 @@ export default function RootLayout({
         >
             <Navbar />
             <article
-                className={`container lg:md xl:lg pv-4 prose prose-sm md:prose-base lg:prose-lg xl:prose-xl dark:prose-invert py-8 px-4 lg:px-0`}
+                className={`container lg:md xl:lg prose prose-sm md:prose-base lg:prose-lg xl:prose-xl dark:prose-invert py-8 px-4 lg:px-0`}
             >
                 {children}
             </article>
