@@ -50,7 +50,8 @@ export default async function BlogLanding() {
                 publishedDate: "Today",
             },
             "hello-world3": {
-                image: "https://upload.wikimedia.org/wikipedia/commons/0/0f/Eiffel_Tower_Vertical.JPG",
+                image: "https://i.stack.imgur.com/2wmyg.jpg",
+
                 title: "Test Post",
                 description: "Hello World!",
                 publishedDate: "Today",
@@ -70,7 +71,7 @@ export default async function BlogLanding() {
             <p className="m-0 italic text-sm mb-12">
                 {'"Can we not do this right now..."'}
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 ">
+            <div className="columns-2 gap-4">
                 {Object.entries(posts).map(([name, post]) => (
                     // <a
                     //     href={`blog/${name}`}
@@ -79,7 +80,7 @@ export default async function BlogLanding() {
                     // >
                     <div
                         key={name}
-                        className="bg-gradient-to-br from-slate-100 to-slate-200 dark:from-stone-700 dark:to-stone-800 rounded-3xl h-fit"
+                        className="bg-gradient-to-br from-slate-100 inline-block to-slate-200 mb-4 dark:from-stone-700 dark:to-stone-800 rounded-3xl h-fit w-full"
                     >
                         {post.image && (
                             <img

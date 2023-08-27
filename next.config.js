@@ -9,6 +9,7 @@ const nextConfig = {
     // For S3
     // output: "export",
     // trailingSlash: true,
+    reactStrictMode: true,
 };
 
 const withMDX = require("@next/mdx")();
