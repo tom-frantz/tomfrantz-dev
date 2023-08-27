@@ -17,6 +17,7 @@ const FlashyLink = ({
     flashClassName,
 }: FlashyLinkProps) => {
     let [postHoverClass, setPostHoverClass] = useState("");
+
     return (
         <a
             href={href}

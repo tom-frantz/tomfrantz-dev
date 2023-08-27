@@ -44,6 +44,19 @@ export default async function BlogLanding() {
                 publishedDate: "Today",
             },
             "hello-world2": {
+                image: "https://upload.wikimedia.org/wikipedia/commons/0/0f/Eiffel_Tower_Vertical.JPG",
+                title: "Test Post",
+                description: "Hello World!",
+                publishedDate: "Today",
+            },
+            "hello-world3": {
+                image: "https://upload.wikimedia.org/wikipedia/commons/0/0f/Eiffel_Tower_Vertical.JPG",
+                title: "Test Post",
+                description: "Hello World!",
+                publishedDate: "Today",
+            },
+            "hello-world4": {
+                image: "https://upload.wikimedia.org/wikipedia/commons/0/0f/Eiffel_Tower_Vertical.JPG",
                 title: "Test Post",
                 description: "Hello World!",
                 publishedDate: "Today",
@@ -51,43 +64,45 @@ export default async function BlogLanding() {
         };
     }
 
-    console.log(posts);
     return (
         <div className="not-prose">
             <h1 className="text-6xl font-bold mb-4">Unadultered Ramblings</h1>
             <p className="m-0 italic text-sm mb-12">
                 {'"Can we not do this right now..."'}
             </p>
-            <div className="grid grid-cols-2 ">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 ">
                 {Object.entries(posts).map(([name, post]) => (
-                    <a
-                        href={`blog/${name}`}
+                    // <a
+                    //     href={`blog/${name}`}
+                    //     key={name}
+                    //     className={"no-underline font-normal h-max h-20"}
+                    // >
+                    <div
                         key={name}
-                        className={"no-underline font-normal"}
+                        className="bg-gradient-to-br from-slate-100 to-slate-200 dark:from-stone-700 dark:to-stone-800 rounded-3xl h-fit"
                     >
-                        <div className="bg-gradient-to-br from-slate-100 to-slate-200 dark:from-stone-700 dark:to-stone-800 rounded-3xl ">
-                            {post.image && (
-                                <img
-                                    className=" rounded-t-3xl "
-                                    src={post.image}
-                                    alt={post.title + " Card Image"}
-                                />
-                            )}
-                            <div className="p-4 pt-2 space-y-1">
-                                <p className="xs:m-0 sm:m-0 font-bold">
-                                    {post.title}
+                        {post.image && (
+                            <img
+                                className=" rounded-t-3xl fit-cover w-full "
+                                src={post.image}
+                                alt={post.title + " Card Image"}
+                            />
+                        )}
+                        <div className="p-4 pt-2 space-y-1 grid">
+                            <p className="xs:m-0 sm:m-0 font-bold">
+                                {post.title}
+                            </p>
+                            <div className="flex flex-row justify-between items-end">
+                                <p className="text-sm m-0 flex">
+                                    {post.description}
                                 </p>
-                                <div className="flex flex-row justify-between items-end">
-                                    <p className="text-sm m-0 flex">
-                                        {post.description}
-                                    </p>
-                                    <p className="text-sm flex flex-shrink-0 ml-4">
-                                        {post.publishedDate}
-                                    </p>
-                                </div>
+                                <p className="text-sm flex flex-shrink-0 ml-4">
+                                    {post.publishedDate}
+                                </p>
                             </div>
                         </div>
-                    </a>
+                    </div>
+                    // </a>
                 ))}
             </div>
         </div>

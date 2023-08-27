@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import Navbar from "@/app/(components)/navbar";
+import { DarkModeButton } from "@/app/(components)/dark_mode";
 
 export const metadata: Metadata = {
     title: "Create Next App",
@@ -24,8 +25,12 @@ export default function RootLayout({
                 {children}
             </article>
             <div
-                className={"w-[calc(100% - 15rem) max-w-[15rem] h-4 flex-grow"}
-            ></div>
+                className={
+                    "w-[calc(100% - 15rem) max-w-[15rem] h-4 flex-grow py-8 px-4"
+                }
+            >
+                <DarkModeButton className={"hidden lg:block float-right"} />
+            </div>
         </div>
     );
 }
