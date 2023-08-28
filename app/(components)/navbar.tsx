@@ -17,7 +17,7 @@ export default function Navbar(props: {}) {
             rounded-b-3xl
             flex flex-row items-baseline 
             lg:flex-col lg:space-x-0 lg:space-y-2
-            pt-8 px-4 lg:py-8 m-4 mt-0`}
+            sm:pt-4 px-2 sm:px-4 lg:py-8 m-2 sm:mx-4 sm:mb-4 mt-0`}
         >
             <FlashyLink
                 href="/"
@@ -25,10 +25,10 @@ export default function Navbar(props: {}) {
             >
                 Tom Frantz
             </FlashyLink>
-            <FlashyLink href="/blog" className={"ml-8"}>
+            <FlashyLink href="/blog" className={"ml-4 sm:ml-8"}>
                 Blog
             </FlashyLink>
-            <FlashyLink href="/projects" className={"ml-8"}>
+            <FlashyLink href="/projects" className={"ml-4 sm:ml-8"}>
                 Projects
             </FlashyLink>
             <DarkModeButton className={"lg:hidden"} />

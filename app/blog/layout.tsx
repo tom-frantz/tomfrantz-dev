@@ -25,8 +25,8 @@ export default function RootLayout({
                     rounded-t-3xl 
                     container lg:md xl:lg 
                     flex-grow lg:self-stretch
-                    prose prose-sm md:prose-base lg:prose-lg xl:prose-xl dark:prose-invert 
-                     lg:mt-8 py-8 px-4`}
+                    prose prose-sm md:prose-base lg:prose-lg xl:prose-xl dark:prose-invert text-justify 
+                    lg:mt-8 py-8 px-4`}
             >
                 {children}
             </article>

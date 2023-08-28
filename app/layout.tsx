@@ -1,18 +1,12 @@
 import React from "react";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Montserrat, Anonymous_Pro } from "next/font/google";
 
-// Supports weights 100-900
-import "@fontsource-variable/montserrat";
-import "@fontsource-variable/montserrat/wght-italic.css";
-
-import "@fontsource/anonymous-pro/400.css";
-import "@fontsource/anonymous-pro/700.css";
-import "@fontsource/anonymous-pro/400-italic.css";
-import "@fontsource/anonymous-pro/700-italic.css";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
+const montserrat = Montserrat({ subsets: ["latin"] });
+const anonymous_pro = Anonymous_Pro({ weight: "400", subsets: ["latin"] });
 
 export const metadata: Metadata = {
     title: "Create Next App",
@@ -42,7 +36,7 @@ export default function RootLayout({
                 />
             </head>
             <body
-                className={`${inter.className} bg-stone-100 dark:bg-stone-800 dark:text-white`}
+                className={`${montserrat.className} ${anonymous_pro} bg-stone-100 dark:bg-stone-800 dark:text-white`}
             >
                 {children}
             </body>
