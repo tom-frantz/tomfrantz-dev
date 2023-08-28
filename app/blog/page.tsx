@@ -76,7 +76,7 @@ export default async function BlogLanding() {
         <div className="not-prose">
             <h1 className="text-6xl font-bold mb-4">Unadultered Ramblings</h1>
             <p className="m-0 italic text-sm mb-12">
-                {'"Can we not do this right now..."'}
+                {'"Crunchy or smooth peanut butter?.."'}
             </p>
             <div className="">
                 {Object.entries(posts).map(([name, post], index) => (
