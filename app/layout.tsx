@@ -1,7 +1,16 @@
-import "./globals.css";
+import React from "react";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import React from "react";
+
+// Supports weights 100-900
+import "@fontsource-variable/montserrat";
+import "@fontsource-variable/montserrat/wght-italic.css";
+
+import "@fontsource/anonymous-pro/400.css";
+import "@fontsource/anonymous-pro/700.css";
+import "@fontsource/anonymous-pro/400-italic.css";
+import "@fontsource/anonymous-pro/700-italic.css";
+import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
