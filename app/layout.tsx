@@ -36,7 +36,7 @@ export default function RootLayout({
                 />
             </head>
             <body
-                className={`${montserrat.className} ${anonymous_pro} bg-stone-100 dark:bg-stone-800 dark:text-white`}
+                className={`${montserrat.className} bg-stone-100 dark:bg-stone-800 dark:text-white`}
             >
                 {children}
             </body>
