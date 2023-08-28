@@ -86,7 +86,7 @@ export const DarkModeButton = ({ className }: { className?: string }) => {
                 setTheme(currentDarkMode());
             }}
             className={
-                "dark:bg-stone-800 bg-stone-100 rounded-md p-2 space-x-0 ml-auto hover:text-amber-400 " +
+                "dark:bg-stone-900 bg-white shadow-sm rounded-md p-2 space-x-0 ml-auto hover:text-amber-400 " +
                 className
             }
         >

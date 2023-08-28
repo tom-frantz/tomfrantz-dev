@@ -15,18 +15,24 @@ export default function RootLayout({
     return (
         <div
             className={
-                "flex lg:flex-row items-center lg:items-start flex-col min-w-fit max-w-full justify-center"
+                "flex lg:flex-row items-center lg:items-start flex-col min-w-fit max-w-full min-h-screen justify-center"
             }
         >
             <Navbar />
             <article
-                className={`container lg:md xl:lg prose prose-sm md:prose-base lg:prose-lg xl:prose-xl dark:prose-invert py-8 px-4 lg:px-0`}
+                className={`
+                    bg-white dark:bg-stone-900 shadow-2xl 
+                    rounded-t-3xl 
+                    container lg:md xl:lg 
+                    flex-grow lg:self-stretch
+                    prose prose-sm md:prose-base lg:prose-lg xl:prose-xl dark:prose-invert 
+                     lg:mt-8 py-8 px-4`}
             >
                 {children}
             </article>
             <div
                 className={
-                    "w-[calc(100% - 15rem) max-w-[15rem] h-4 flex-grow py-8 px-4"
+                    "w-[calc(100% - 15rem) max-w-[15rem] h-0 lg:h-auto  lg:flex-grow lg:py-8 lg:px-4"
                 }
             >
                 <DarkModeButton className={"hidden lg:block float-right"} />

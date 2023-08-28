@@ -1,9 +1,10 @@
 import path from "path";
 import fs from "fs";
+import { BlogPostPreview } from "@/app/blog/(components)/blog_post_preview";
 
 const BLOG_DIR = path.join(__dirname);
 
-export interface BlogPost {
+export interface BlogPostPreviewDetails {
     title: string;
     description: string;
     publishedDate: string;
@@ -11,7 +12,7 @@ export interface BlogPost {
 }
 
 interface BlogPosts {
-    [name: string]: BlogPost;
+    [name: string]: BlogPostPreviewDetails;
 }
 
 async function getPosts() {
@@ -62,6 +63,12 @@ export default async function BlogLanding() {
                 description: "Hello World!",
                 publishedDate: "Today",
             },
+            "hello-world5": {
+                image: "https://upload.wikimedia.org/wikipedia/commons/0/0f/Eiffel_Tower_Vertical.JPG",
+                title: "Test Post",
+                description: "Hello World!",
+                publishedDate: "Today",
+            },
         };
     }
 
@@ -71,39 +78,12 @@ export default async function BlogLanding() {
             <p className="m-0 italic text-sm mb-12">
                 {'"Can we not do this right now..."'}
             </p>
-            <div className="columns-2 gap-4">
-                {Object.entries(posts).map(([name, post]) => (
-                    // <a
-                    //     href={`blog/${name}`}
-                    //     key={name}
-                    //     className={"no-underline font-normal h-max h-20"}
-                    // >
-                    <div
-                        key={name}
-                        className="bg-gradient-to-br from-slate-100 inline-block to-slate-200 mb-4 dark:from-stone-700 dark:to-stone-800 rounded-3xl h-fit w-full"
-                    >
-                        {post.image && (
-                            <img
-                                className=" rounded-t-3xl fit-cover w-full "
-                                src={post.image}
-                                alt={post.title + " Card Image"}
-                            />
-                        )}
-                        <div className="p-4 pt-2 space-y-1 grid">
-                            <p className="xs:m-0 sm:m-0 font-bold">
-                                {post.title}
-                            </p>
-                            <div className="flex flex-row justify-between items-end">
-                                <p className="text-sm m-0 flex">
-                                    {post.description}
-                                </p>
-                                <p className="text-sm flex flex-shrink-0 ml-4">
-                                    {post.publishedDate}
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    // </a>
+            <div className="">
+                {Object.entries(posts).map(([name, post], index) => (
+                    <>
+                        {index !== 0 && <hr className={"border-stone-500"} />}
+                        <BlogPostPreview key={name} link={name} post={post} />
+                    </>
                 ))}
             </div>
         </div>

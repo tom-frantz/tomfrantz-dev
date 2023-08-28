@@ -11,9 +11,13 @@ import FlashyLink from "@/app/(components)/flashy_link";
 export default function Navbar(props: {}) {
     return (
         <div
-            className={
-                "max-w-[65ch] w-full flex flex-row items-baseline pt-8 lg:w-60 lg:flex-col lg:space-x-0 lg:space-y-2  px-4 lg:py-8 lg:px-12"
-            }
+            className={`
+            lg:bg-white lg:dark:bg-stone-900 lg:shadow-md  
+            max-w-[65ch] w-full lg:w-60 
+            rounded-b-3xl
+            flex flex-row items-baseline 
+            lg:flex-col lg:space-x-0 lg:space-y-2
+            pt-8 px-4 lg:py-8 m-4 mt-0`}
         >
             <FlashyLink
                 href="/"

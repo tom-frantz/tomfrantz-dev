@@ -42,7 +42,7 @@ export default function RootLayout({
                 />
             </head>
             <body
-                className={`${inter.className} dark:bg-stone-900 dark:text-white`}
+                className={`${inter.className} bg-stone-100 dark:bg-stone-800 dark:text-white`}
             >
                 {children}
             </body>
