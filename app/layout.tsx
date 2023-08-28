@@ -1,6 +1,11 @@
 import React from "react";
 import type { Metadata } from "next";
-import { Inter, Montserrat, Anonymous_Pro } from "next/font/google";
+import {
+    Inter,
+    Montserrat,
+    Anonymous_Pro,
+    Merriweather,
+} from "next/font/google";
 
 import "./globals.css";
 
