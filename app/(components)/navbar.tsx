@@ -17,7 +17,7 @@ export default function Navbar(props: {}) {
             rounded-b-3xl
             flex flex-row items-baseline 
             lg:flex-col lg:space-x-0 lg:space-y-2
-            sm:pt-4 px-8 lg:py-8 my-2  sm:mx-4 sm:mb-4 mt-0`}
+            sm:pt-4 px-8 lg:py-8 my-2 sm:mx-4 sm:mb-4 sm:mt-0`}
         >
             <FlashyLink
                 href="/"
