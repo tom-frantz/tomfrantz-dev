@@ -1,0 +1,18 @@
+import {BlogTitle} from "@/app/blog/(components)/blog_title";
+import FlashyLink from "@/app/(components)/flashy_link"
+export const meta = {
+    title: "Context Independence In Programming",
+    description: "or How I stopped worrying and learned to love the trust",
+    publishedDate: "September 06, 2023",
+}
+
+<BlogTitle meta={meta}/>
+
+Ever since university, I've always been trying to make my code 'clean'. It's the gold standard we should all strive for, right? With that being said, it has always been a struggle for me to understand what clean code *actually* is. Should I follow this pattern or that? How long should my functions names be? There's a thousand and a half guidelines in the wild, but I feel like none of them actually make my code clean.
+
+Until, one day, I was reading through Practical Object-Oriented Design in Ruby (or Pooder, for the cultured). It led me down a rabbit hole that confused me pretty heavily at first, but I think it was one of the more important things I wish they taught us as Uni.
+
+## The setup
+
+```python
+class
