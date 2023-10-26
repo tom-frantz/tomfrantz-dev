@@ -9,11 +9,13 @@ export default {
   serverBuildPath: "server/index.mjs",
   serverModuleFormat: "esm",
   routes: (defineRoutes) =>
-    defineRoutes((route) => {
+    // eslint-disable-next-line no-unused-vars
+    defineRoutes((_route) => {
       if (process.env.NODE_ENV === "production") return;
 
       console.log("⚠️  Test routes enabled.");
 
-      const appDir = path.join(process.cwd(), "app");
+      // eslint-disable-next-line no-unused-vars
+      const _appDir = path.join(process.cwd(), "app");
     }),
 };

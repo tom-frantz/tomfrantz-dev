@@ -1,5 +1,5 @@
 const BlogPage = () => {
-  return "landing";
+  return "TomFrantz.dev hehe";
 };
 
 export default BlogPage;
