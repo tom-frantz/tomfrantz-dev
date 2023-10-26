@@ -15,10 +15,5 @@ export default {
       console.log("⚠️  Test routes enabled.");
 
       const appDir = path.join(process.cwd(), "app");
-
-      route(
-        "__tests/create-user",
-        path.relative(appDir, "cypress/support/test-routes/create-user.ts"),
-      );
     }),
 };
