@@ -2,8 +2,8 @@ const BlogPage = () => {
   return (
     <div className="flex justify-between flex-col h-full">
       <div>
-        <header className="py-16">
-          <div className="prose prose-xl mx-auto">
+        <header className="py-16 px-4 sm:px-0">
+          <div className="prose lg:prose-xl mx-auto">
             <h1 className="mb-0">
               Tom Frantz <span className="font-normal text-xl">.dev</span>
             </h1>
@@ -16,7 +16,7 @@ const BlogPage = () => {
             imageRendering: "pixelated",
           }}
         >
-          <article className="prose prose-xl text-white backdrop-brightness-25 shadow-uniform mx-auto py-16">
+          <article className="prose lg:prose-xl text-white backdrop-brightness-25 shadow-uniform mx-auto py-16 px-4 sm:px-0">
             <b>Hello, World!</b>
             <p>
               This is my website. Yes, very cool, you don&apos;t have to tell me
@@ -26,19 +26,22 @@ const BlogPage = () => {
             <p></p>
           </article>
         </section>
-        <section className="py-16">
-          <div className="prose prose-xl mx-auto ">
+        <section className="py-16 px-4 sm:px-0">
+          <div className="prose lg:prose-xl mx-auto ">
             <h2>Blog</h2>
+            <p>More to come!</p>
           </div>
         </section>
-        <section className="py-16 bg-stars-bg">
-          <div className="prose prose-invert text-white prose-xl mx-auto ">
+        <section className="py-16 px-4 sm:px-0 bg-stars-bg">
+          <div className="prose prose-invert text-white lg:prose-xl mx-auto ">
             <h2>Projects</h2>
+            <p>More to come!</p>
           </div>
         </section>
-        <section className="py-16">
-          <div className="prose prose-xl mx-auto ">
-            <h2>About me</h2>{" "}
+        <section className="py-16 px-4 sm:px-0">
+          <div className="prose lg:prose-xl mx-auto ">
+            <h2>About me</h2>
+            <p>More to come!</p>
           </div>
         </section>
       </div>
