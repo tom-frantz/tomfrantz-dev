@@ -24,6 +24,7 @@
   "dependencies": {
     "@architect/architect": "^10.14.2",
     "@architect/functions": "^7.0.0",
+    "@fontsource/montserrat": "^5.0.15",
     "@paralleldrive/cuid2": "^2.2.2",
     "@remix-run/architect": "^2.1.0",
     "@remix-run/css-bundle": "^2.1.0",

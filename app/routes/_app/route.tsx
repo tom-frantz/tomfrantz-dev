@@ -5,15 +5,7 @@ export const meta: MetaFunction = () => [{ title: "tomfrantz.dev" }];
 
 export default function Index() {
   return (
-    <main
-      className={
-        "relative min-h-screen bg-white sm:flex sm:items-center sm:justify-center " +
-        "bg-no-repeat bg-cover bg-[url('~/img/starchart.png')] bg-center text-white"
-      }
-      style={{
-        imageRendering: "pixelated",
-      }}
-    >
+    <main className={"relative h-screen bg-white flex flex-col items-stretch"}>
       <Outlet />
     </main>
   );
