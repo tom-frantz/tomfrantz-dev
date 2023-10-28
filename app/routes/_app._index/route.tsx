@@ -4,10 +4,10 @@ const BlogPage = () => {
       <div>
         <header className="py-16 px-4 sm:px-0">
           <div className="prose lg:prose-xl mx-auto">
-            <h1 className="mb-0">
+            <h1 style={{ marginBottom: "0px" }}>
               Tom Frantz <span className="font-normal text-xl">.dev</span>
             </h1>
-            <p className="mt-2">Turbo Nerdo</p>
+            <p>Turbo Nerdo</p>
           </div>
         </header>
         <section
@@ -21,9 +21,8 @@ const BlogPage = () => {
             <p>
               This is my website. Yes, very cool, you don&apos;t have to tell me
               twice. I am very proud to be at this point again, as a chronic
-              restarter, to have made my website for the third time recently
+              restarter, to have made my website for the third time recently.
             </p>
-            <p></p>
           </article>
         </section>
         <section className="py-16 px-4 sm:px-0">
