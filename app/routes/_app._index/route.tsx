@@ -1,61 +1,43 @@
+import { Link } from "@remix-run/react";
+
 const BlogPage = () => {
   return (
-    <div className="flex justify-between flex-col h-full">
-      <div>
-        <header className="py-16 px-4 sm:px-0">
-          <div className="prose lg:prose-xl mx-auto">
-            <h1 style={{ marginBottom: "0px" }}>
-              Tom Frantz <span className="font-normal text-xl">.dev</span>
+    <div className="flex h-full flex-col">
+      <nav className="bg-gradient-to-r from-lothian-blue-light via-lothian-blue via-30% to-lothian-blue-dark px-2 pb-8 pt-16 text-white sm:px-8">
+        <div className="mx-auto w-full max-w-2xl lg:max-w-5xl">
+          <header>
+            <h1 className="text-6xl font-black sm:text-8xl">
+              Tom Frantz<span className="text-2xl font-normal">.dev</span>
             </h1>
-            <p>Turbo Nerdo</p>
+            <span>Turbo Nerdo</span>
+          </header>
+
+          <div className="flex flex-row-reverse gap-8 underline">
+            <Link to="blog">About Me</Link>
+            <Link to="projects">Projects</Link>
+            <Link to="blog">Blog</Link>
           </div>
-        </header>
-        <section
-          className="bg-no-repeat bg-cover bg-[url('~/img/starchart.png')] bg-center text-white overflow-hidden"
-          style={{
-            imageRendering: "pixelated",
-          }}
-        >
-          <article className="prose lg:prose-xl text-white backdrop-brightness-25 shadow-uniform mx-auto py-16 px-4 sm:px-0">
-            <b>Hello, World!</b>
-            <p>
-              This is my website. Yes, very cool, you don&apos;t have to tell me
-              twice. I am very proud to be at this point again, as a chronic
-              restarter, to have made my website for the third time recently.
-            </p>
-          </article>
-        </section>
-        <section className="py-16 px-4 sm:px-0">
-          <div className="prose lg:prose-xl mx-auto ">
-            <h2>Blog</h2>
-            <p>More to come!</p>
-          </div>
-        </section>
-        <section className="py-16 px-4 sm:px-0 bg-stars-bg">
-          <div className="prose prose-invert text-white lg:prose-xl mx-auto ">
-            <h2>Projects</h2>
-            <p>More to come!</p>
-          </div>
-        </section>
-        <section className="py-16 px-4 sm:px-0">
-          <div className="prose lg:prose-xl mx-auto ">
-            <h2>About me</h2>
-            <p>More to come!</p>
-          </div>
-        </section>
-      </div>
-      <section className="p-4 bg-stars-bg">
-        <div className="prose prose-invert text-white prose-sm ">
+        </div>
+      </nav>
+      <main className="flex flex-col gap-8 px-2 py-16 text-black sm:px-8">
+        <div className="mx-auto w-full max-w-2xl lg:max-w-5xl">
+          <h2 className="text-3xl font-bold">Hello, World!</h2>
           <p>
-            I want to take a moment to thank my arms, for always being by my
-            side, and my legs, for holding me up this whole time.
-          </p>
-          <p>
-            Also check out this{" "}
-            <a href="https://milindi-kodikara.github.io/">very busy bee</a>
+            This is my website. Yes, very cool, you don&apos;t have to tell me
+            twice. I am very proud to be at this point again, as a chronic
+            restarter, to have made my website for the{" "}
+            <span className="line-through">third</span> fourth time recently.
           </p>
         </div>
-      </section>
+        <div className="mx-auto w-full max-w-2xl bg-gradient-to-r from-lothian-blue-light via-lothian-blue via-30% to-lothian-blue-dark p-12 text-white shadow-2xl lg:max-w-5xl">
+          <header>
+            <h2 className="text-xl font-bold">
+              Pergamon: A World Atlas for games
+            </h2>
+            <p className="text-gray-300">My current project</p>
+          </header>
+        </div>
+      </main>
     </div>
   );
 };
