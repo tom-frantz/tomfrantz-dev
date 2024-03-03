@@ -6,6 +6,11 @@ export default {
   theme: {
     extend: {
       colors: {
+        "lothian-blue": {
+          light: "#424b57",
+          DEFAULT: "#263240",
+          dark: "#19232f",
+        },
         "stars-bg": "#272120",
       },
       backdropBrightness: {
