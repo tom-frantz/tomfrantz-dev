@@ -1,4 +1,16 @@
-import { Outlet } from "@remix-run/react";
+import { MetaFunction, Outlet } from "@remix-run/react";
+
+export const meta: MetaFunction = ({ location }) => {
+  let parts = location.pathname.split("/");
+  let path = parts[parts.length - 1];
+  return [
+    { title: `${path} | Tom Frantz` },
+    {
+      name: "description",
+      content: `the ${path} blog post, authored by Tom Frantz`,
+    },
+  ];
+};
 
 // The layout for all individual blog.
 // The `/blog` page ignores this

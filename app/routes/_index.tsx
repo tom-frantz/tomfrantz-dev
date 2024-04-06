@@ -1,4 +1,14 @@
-const BlogPage = () => {
+import { MetaFunction } from "@remix-run/react";
+
+export const meta: MetaFunction = () => [
+  { title: "Tom Frantz" },
+  {
+    name: "description",
+    content: "Tom Frantz, the experience",
+  },
+];
+
+const IndexPage = () => {
   return (
     <main className="flex flex-col gap-8 px-2 py-16 text-black sm:px-8">
       <div className="mx-auto w-full max-w-2xl lg:max-w-5xl">
@@ -11,15 +21,15 @@ const BlogPage = () => {
         </p>
       </div>
       <div className="mx-auto w-full max-w-2xl bg-gradient-to-r from-lothian-blue-light via-lothian-blue via-30% to-lothian-blue-dark p-12 text-white shadow-2xl lg:max-w-5xl">
-        <header>
+        <section>
           <h2 className="text-xl font-bold">
             Pergamon: A World Atlas for games
           </h2>
           <p className="text-gray-300">My current project</p>
-        </header>
+        </section>
       </div>
     </main>
   );
 };
 
-export default BlogPage;
+export default IndexPage;
