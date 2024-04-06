@@ -1,5 +1,3 @@
-import { Link } from "@remix-run/react";
-
 const BlogPage = () => {
   return (
     <main className="flex flex-col gap-8 px-2 py-16 text-black sm:px-8">
