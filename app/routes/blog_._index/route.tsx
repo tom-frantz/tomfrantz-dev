@@ -19,7 +19,9 @@ interface BlogPostMeta {
   description: string;
 }
 
-const POSTS: BlogPostMeta[] = [{ path: "/blog/rusty_things", ...rusty_things }];
+const POSTS: BlogPostMeta[] = [
+  // { path: "/blog/rusty_things", ...rusty_things }
+];
 
 const BlogPage = () => {
   console.log(POSTS);
@@ -36,6 +38,12 @@ const BlogPage = () => {
             is the result of that. Enjoy!
           </p>
         </header>
+        {POSTS.length == 0 && (
+          <p className={"font-bold"}>
+            There's nothing here yet! I'm sure I'll write something good soon
+            though!
+          </p>
+        )}
         {POSTS.map((p) => (
           <Link to={p.path} key={p.path}>
             <BlogCard
