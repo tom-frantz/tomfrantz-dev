@@ -1,6 +1,4 @@
-export interface BlogCardProps {}
-
-export const BlogCard = (props: BlogCardProps) => {
+export const BlogCard = () => {
   return (
     <article>
       <header className={"mb-1"}>
@@ -11,8 +9,8 @@ export const BlogCard = (props: BlogCardProps) => {
       </header>
       <p>
         This must be where a description of all the best stuff goes. Otherwise,
-        there's no point to this section. I guess we'll just have to see what I
-        actually write over time, hehe.
+        there&apos;s no point to this section. I guess we&apos;ll just have to
+        see what I actually write over time, hehe.
       </p>
     </article>
   );

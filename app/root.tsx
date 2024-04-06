@@ -34,7 +34,7 @@ export default function App() {
           className={"relative flex h-screen flex-col items-stretch bg-white"}
         >
           <div className="flex h-full flex-col">
-            <nav className="bg-gradient-to-r from-lothian-blue-light via-lothian-blue via-30% to-lothian-blue-dark px-2 pb-8 pt-16 text-white sm:px-8">
+            <nav className="bg-gradient-to-r from-lothian-blue-light via-lothian-blue via-30% to-lothian-blue-dark px-2 pb-8 pt-8 text-white sm:px-8 sm:pt-16">
               <div className="mx-auto w-full max-w-2xl lg:max-w-5xl">
                 <Link to="/">
                   <header>
