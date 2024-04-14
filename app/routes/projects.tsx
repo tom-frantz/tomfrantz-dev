@@ -7,3 +7,5 @@ export const meta: MetaFunction = () => [
     content: "All the projects, created by Tom Frantz",
   },
 ];
+
+export default function ProjectsPage() {}
