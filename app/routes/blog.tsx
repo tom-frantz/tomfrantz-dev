@@ -1,8 +1,8 @@
 import { MetaFunction, Outlet } from "@remix-run/react";
 
 export const meta: MetaFunction = ({ location }) => {
-  let parts = location.pathname.split("/");
-  let path = parts[parts.length - 1];
+  const parts = location.pathname.split("/");
+  const path = parts[parts.length - 1];
   return [
     { title: `${path} | Tom Frantz` },
     {

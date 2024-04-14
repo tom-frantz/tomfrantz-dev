@@ -1,6 +1,6 @@
 import { Link, MetaFunction } from "@remix-run/react";
 
-import { attributes as rusty_things } from "~/routes/blog.rusty_things.mdx";
+// import { attributes as rusty_things } from "~/routes/blog.rusty_things.mdx";
 
 import { BlogCard } from "./BlogCard";
 
@@ -38,12 +38,12 @@ const BlogPage = () => {
             is the result of that. Enjoy!
           </p>
         </header>
-        {POSTS.length == 0 && (
+        {POSTS.length == 0 ? (
           <p className={"font-bold"}>
-            There's nothing here yet! I'm sure I'll write something good soon
-            though!
+            There&apos;s nothing here yet! I&apos;m sure I&apos;ll write
+            something good soon though!
           </p>
-        )}
+        ) : null}
         {POSTS.map((p) => (
           <Link to={p.path} key={p.path}>
             <BlogCard

@@ -8,4 +8,6 @@ export const meta: MetaFunction = () => [
   },
 ];
 
-export default function ProjectsPage() {}
+export default function ProjectsPage() {
+  return <p>Coming soon</p>;
+}
