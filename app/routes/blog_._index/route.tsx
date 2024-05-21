@@ -1,6 +1,6 @@
 import { Link, MetaFunction } from "@remix-run/react";
 
-import { attributes as rusty_things } from "~/routes/blog.rusty_things.mdx";
+import { attributes as rusty_things } from "~/routes/blog.polonnaruwa0.mdx";
 
 import { BlogCard } from "./BlogCard";
 
@@ -20,7 +20,7 @@ interface BlogPostMeta {
   published?: boolean;
 }
 
-const POSTS: BlogPostMeta[] = [{ path: "/blog/rusty_things", ...rusty_things }];
+const POSTS: BlogPostMeta[] = [{ path: "/blog/polonnaruwa0", ...rusty_things }];
 
 const BlogPage = () => {
   const filteredPosts = POSTS.filter((p) => {
