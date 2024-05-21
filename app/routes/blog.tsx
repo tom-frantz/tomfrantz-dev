@@ -17,7 +17,7 @@ export const meta: MetaFunction = ({ location }) => {
 const BlogLayout = () => {
   return (
     <div className=" px-2 py-16 text-black sm:px-8 ">
-      <div className="prose mx-auto flex w-full max-w-2xl flex-col lg:prose-xl lg:max-w-5xl">
+      <div className="prose mx-auto max-w-2xl lg:prose-lg lg:max-w-5xl">
         <Outlet />
       </div>
     </div>

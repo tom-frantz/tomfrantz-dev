@@ -12,7 +12,7 @@ export const BlogCard = ({
   return (
     <article>
       <header className={"mb-1"}>
-        <h3 className="text-xl font-semibold">{title}</h3>
+        <h2 className="text-3xl font-semibold">{title}</h2>
         <span className="text-gray-600">{format(created, "do LLL, yyyy")}</span>
       </header>
       <p>{description}</p>

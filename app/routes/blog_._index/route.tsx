@@ -1,6 +1,6 @@
 import { Link, MetaFunction } from "@remix-run/react";
 
-// import { attributes as rusty_things } from "~/routes/blog.rusty_things.mdx";
+import { attributes as rusty_things } from "~/routes/blog.rusty_things.mdx";
 
 import { BlogCard } from "./BlogCard";
 
@@ -17,17 +17,18 @@ interface BlogPostMeta {
   title: string;
   created: string;
   description: string;
+  published?: boolean;
 }
 
-const POSTS: BlogPostMeta[] = [
-  // { path: "/blog/rusty_things", ...rusty_things }
-];
+const POSTS: BlogPostMeta[] = [{ path: "/blog/rusty_things", ...rusty_things }];
 
 const BlogPage = () => {
-  console.log(POSTS);
+  const filteredPosts = POSTS.filter((p) => {
+    return p.published;
+  });
 
   return (
-    <main className=" px-2 py-16 text-black sm:px-8 ">
+    <main className="not-prose flex w-full flex-col px-2 py-16 text-black sm:px-8 ">
       <div className="mx-auto flex w-full max-w-2xl flex-col gap-12 lg:max-w-5xl">
         <header>
           <title>
@@ -38,13 +39,13 @@ const BlogPage = () => {
             is the result of that. Enjoy!
           </p>
         </header>
-        {POSTS.length == 0 ? (
+        {filteredPosts.length == 0 ? (
           <p className={"font-bold"}>
             There&apos;s nothing here yet! I&apos;m sure I&apos;ll write
             something good soon though!
           </p>
         ) : null}
-        {POSTS.map((p) => (
+        {filteredPosts.map((p) => (
           <Link to={p.path} key={p.path}>
             <BlogCard
               title={p.title}
